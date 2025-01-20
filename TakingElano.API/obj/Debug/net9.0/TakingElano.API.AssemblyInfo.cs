@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TakingElano.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+39b9a44fab86a0e00856d3ec02ee3f0080a81c0b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6ee8f5e2198d90b8dca9b58a634fd42df588237c")]
 [assembly: System.Reflection.AssemblyProductAttribute("TakingElano.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TakingElano.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

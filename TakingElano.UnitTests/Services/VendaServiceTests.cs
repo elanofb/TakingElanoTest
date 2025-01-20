@@ -54,33 +54,7 @@ public class VendaServiceTests
 
         // Assert
         _vendaRepositoryMock.Verify(r => r.AddAsync(It.IsAny<Venda>()), Times.Once);
-        //_messagePublisherMock.Verify(m => m.Publish(It.IsAny<string>()), Times.Once);
         _messagePublisherMock.Verify(m => m.Publish(It.Is<string>(s => s.Contains("Produto A"))), Times.Once);
 
     }
-
-    //USANDO BOGUS
-    // [Fact]
-    // public async Task CriarVendaAsync_DeveSalvarVendaCorretamente_BOGUS()
-    // {
-    //     // Arrange
-    //     var vendaDto = new Faker<VendaDto>()
-    //         .RuleFor(v => v.Data, f => f.Date.Future())
-    //         .RuleFor(v => v.Total, f => f.Finance.Amount())
-    //         .RuleFor(v => v.Itens, f => new Faker<ItemDto>()
-    //             .RuleFor(i => i.Nome, f => f.Commerce.ProductName())
-    //             .RuleFor(i => i.Quantidade, f => f.Random.Int(1, 10))
-    //             .RuleFor(i => i.PrecoUnitario, f => f.Random.Decimal(1, 100))
-    //             .Generate(3))
-    //         .Generate();
-
-    //     // Act
-    //     await _vendaService.CriarVendaAsync(vendaDto);
-
-    //     // Assert
-    //     await _vendaRepository.Received(1).AddAsync(Arg.Is<Venda>(v =>
-    //         v.Total == vendaDto.Total &&
-    //         v.Itens.Count == vendaDto.Itens.Count
-    //     ));
-    // }
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Elano\\Jbs\\Tests\\TakingElano\\TakingElano.Domain\\TakingElano.Domain.csproj": {}
+    "C:\\Elano\\Jbs\\Tests\\TakingElanoTest\\TakingElano.Domain\\TakingElano.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Elano\\Jbs\\Tests\\TakingElano\\TakingElano.Domain\\TakingElano.Domain.csproj": {
+    "C:\\Elano\\Jbs\\Tests\\TakingElanoTest\\TakingElano.Domain\\TakingElano.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Elano\\Jbs\\Tests\\TakingElano\\TakingElano.Domain\\TakingElano.Domain.csproj",
+        "projectUniqueName": "C:\\Elano\\Jbs\\Tests\\TakingElanoTest\\TakingElano.Domain\\TakingElano.Domain.csproj",
         "projectName": "TakingElano.Domain",
-        "projectPath": "C:\\Elano\\Jbs\\Tests\\TakingElano\\TakingElano.Domain\\TakingElano.Domain.csproj",
+        "projectPath": "C:\\Elano\\Jbs\\Tests\\TakingElanoTest\\TakingElano.Domain\\TakingElano.Domain.csproj",
         "packagesPath": "C:\\Users\\Elano\\.nuget\\packages\\",
-        "outputPath": "C:\\Elano\\Jbs\\Tests\\TakingElano\\TakingElano.Domain\\obj\\",
+        "outputPath": "C:\\Elano\\Jbs\\Tests\\TakingElanoTest\\TakingElano.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

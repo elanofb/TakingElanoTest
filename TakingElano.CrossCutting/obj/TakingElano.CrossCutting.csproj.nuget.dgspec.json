@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Elano\\Jbs\\Tests\\TakingElano\\TakingElano.CrossCutting\\TakingElano.CrossCutting.csproj": {}
+    "C:\\Elano\\Jbs\\Tests\\TakingElanoTest\\TakingElano.CrossCutting\\TakingElano.CrossCutting.csproj": {}
   },
   "projects": {
-    "C:\\Elano\\Jbs\\Tests\\TakingElano\\TakingElano.CrossCutting\\TakingElano.CrossCutting.csproj": {
+    "C:\\Elano\\Jbs\\Tests\\TakingElanoTest\\TakingElano.CrossCutting\\TakingElano.CrossCutting.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Elano\\Jbs\\Tests\\TakingElano\\TakingElano.CrossCutting\\TakingElano.CrossCutting.csproj",
+        "projectUniqueName": "C:\\Elano\\Jbs\\Tests\\TakingElanoTest\\TakingElano.CrossCutting\\TakingElano.CrossCutting.csproj",
         "projectName": "TakingElano.CrossCutting",
-        "projectPath": "C:\\Elano\\Jbs\\Tests\\TakingElano\\TakingElano.CrossCutting\\TakingElano.CrossCutting.csproj",
+        "projectPath": "C:\\Elano\\Jbs\\Tests\\TakingElanoTest\\TakingElano.CrossCutting\\TakingElano.CrossCutting.csproj",
         "packagesPath": "C:\\Users\\Elano\\.nuget\\packages\\",
-        "outputPath": "C:\\Elano\\Jbs\\Tests\\TakingElano\\TakingElano.CrossCutting\\obj\\",
+        "outputPath": "C:\\Elano\\Jbs\\Tests\\TakingElanoTest\\TakingElano.CrossCutting\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
