@@ -13,7 +13,11 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TakingElano.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
+<<<<<<< HEAD
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b15f577ac5d2ea10eb024c9a82225c384810420e")]
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6ee8f5e2198d90b8dca9b58a634fd42df588237c")]
+>>>>>>> v1.0.1
 [assembly: System.Reflection.AssemblyProductAttribute("TakingElano.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TakingElano.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

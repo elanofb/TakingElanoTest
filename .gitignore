@@ -5,4 +5,10 @@
 *.pdb
 *.sourcelink.json
 *.AssemblyInfo.cs
+<<<<<<< HEAD
 *.exe
+=======
+*.exe
+*.dgspec.json
+*.assets.json
+>>>>>>> v1.0.1
