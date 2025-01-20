@@ -1,0 +1,6 @@
+@TakingElano.API_HostAddress = http://localhost:5164
+
+GET {{TakingElano.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

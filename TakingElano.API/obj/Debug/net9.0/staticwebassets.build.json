@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "AdzsRRkjXCCKL8qdEm8QsahQ13ILuP1hOuLtODmi31A=",
+  "Source": "TakingElano.API",
+  "BasePath": "_content/TakingElano.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
