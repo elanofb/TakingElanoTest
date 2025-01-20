@@ -54,7 +54,6 @@ public class VendaServiceTests
 
         // Assert
         _vendaRepositoryMock.Verify(r => r.AddAsync(It.IsAny<Venda>()), Times.Once);
-        //_messagePublisherMock.Verify(m => m.Publish(It.IsAny<string>()), Times.Once);
         _messagePublisherMock.Verify(m => m.Publish(It.Is<string>(s => s.Contains("Produto A"))), Times.Once);
 
     }
