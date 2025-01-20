@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TakingElano.CrossCutting")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+867b7af40740ad63eb18a4b6be5f60d3248182e8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b15f577ac5d2ea10eb024c9a82225c384810420e")]
 [assembly: System.Reflection.AssemblyProductAttribute("TakingElano.CrossCutting")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TakingElano.CrossCutting")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

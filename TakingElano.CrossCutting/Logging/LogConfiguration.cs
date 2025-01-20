@@ -10,7 +10,6 @@ public static class LogConfiguration
     public static void ConfigureLogging()
     {
         Log.Logger = new LoggerConfiguration()
-            //.WriteTo.Console()
             .WriteTo.File("logs/log-.txt", rollingInterval: RollingInterval.Day)
             .CreateLogger();
 

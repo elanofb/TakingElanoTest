@@ -2,3 +2,7 @@
 /obj/
 *.cache
 *.dll
+*.pdb
+*.sourcelink.json
+*.AssemblyInfo.cs
+*.exe
