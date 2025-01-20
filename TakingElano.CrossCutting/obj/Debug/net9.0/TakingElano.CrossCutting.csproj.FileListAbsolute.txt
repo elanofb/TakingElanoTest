@@ -1,0 +1,12 @@
+C:\Elano\Jbs\Tests\TakingElano\TakingElano.CrossCutting\bin\Debug\net9.0\TakingElano.CrossCutting.deps.json
+C:\Elano\Jbs\Tests\TakingElano\TakingElano.CrossCutting\bin\Debug\net9.0\TakingElano.CrossCutting.dll
+C:\Elano\Jbs\Tests\TakingElano\TakingElano.CrossCutting\bin\Debug\net9.0\TakingElano.CrossCutting.pdb
+C:\Elano\Jbs\Tests\TakingElano\TakingElano.CrossCutting\obj\Debug\net9.0\TakingElano.CrossCutting.csproj.AssemblyReference.cache
+C:\Elano\Jbs\Tests\TakingElano\TakingElano.CrossCutting\obj\Debug\net9.0\TakingElano.CrossCutting.GeneratedMSBuildEditorConfig.editorconfig
+C:\Elano\Jbs\Tests\TakingElano\TakingElano.CrossCutting\obj\Debug\net9.0\TakingElano.CrossCutting.AssemblyInfoInputs.cache
+C:\Elano\Jbs\Tests\TakingElano\TakingElano.CrossCutting\obj\Debug\net9.0\TakingElano.CrossCutting.AssemblyInfo.cs
+C:\Elano\Jbs\Tests\TakingElano\TakingElano.CrossCutting\obj\Debug\net9.0\TakingElano.CrossCutting.csproj.CoreCompileInputs.cache
+C:\Elano\Jbs\Tests\TakingElano\TakingElano.CrossCutting\obj\Debug\net9.0\TakingElano.CrossCutting.dll
+C:\Elano\Jbs\Tests\TakingElano\TakingElano.CrossCutting\obj\Debug\net9.0\refint\TakingElano.CrossCutting.dll
+C:\Elano\Jbs\Tests\TakingElano\TakingElano.CrossCutting\obj\Debug\net9.0\TakingElano.CrossCutting.pdb
+C:\Elano\Jbs\Tests\TakingElano\TakingElano.CrossCutting\obj\Debug\net9.0\ref\TakingElano.CrossCutting.dll

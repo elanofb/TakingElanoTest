@@ -1,0 +1,723 @@
+2025-01-20 12:27:49.894 -03:00 [INF] Now listening on: http://localhost:5164
+2025-01-20 12:27:49.915 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-20 12:27:49.916 -03:00 [INF] Hosting environment: Development
+2025-01-20 12:27:49.916 -03:00 [INF] Content root path: C:\Elano\Jbs\Tests\TakingElano\TakingElano.API
+2025-01-20 12:28:23.670 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5164/swagger - null null
+2025-01-20 12:28:23.690 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5164/swagger - 301 0 null 21.1123ms
+2025-01-20 12:28:23.701 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5164/swagger/index.html - null null
+2025-01-20 12:28:23.744 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5164/swagger/index.html - 200 null text/html;charset=utf-8 43.6005ms
+2025-01-20 12:28:23.774 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5164/swagger/swagger-ui.css - null null
+2025-01-20 12:28:23.775 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5164/swagger/index.css - null null
+2025-01-20 12:28:23.775 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5164/swagger/swagger-ui-bundle.js - null null
+2025-01-20 12:28:23.775 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5164/swagger/swagger-ui-standalone-preset.js - null null
+2025-01-20 12:28:23.775 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5164/swagger/index.js - null null
+2025-01-20 12:28:23.777 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5164/swagger/index.js - 200 null application/javascript;charset=utf-8 1.5842ms
+2025-01-20 12:28:23.789 -03:00 [INF] Sending file. Request path: '/index.css'. Physical path: 'N/A'
+2025-01-20 12:28:23.789 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5164/swagger/index.css - 200 202 text/css 14.5732ms
+2025-01-20 12:28:23.792 -03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-01-20 12:28:23.792 -03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-01-20 12:28:23.793 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5164/swagger/swagger-ui.css - 200 152035 text/css 18.9035ms
+2025-01-20 12:28:23.794 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5164/swagger/swagger-ui-standalone-preset.js - 200 230007 text/javascript 18.8588ms
+2025-01-20 12:28:23.795 -03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-01-20 12:28:23.796 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5164/swagger/swagger-ui-bundle.js - 200 1426050 text/javascript 20.8311ms
+2025-01-20 12:28:23.968 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5164/swagger/v1/swagger.json - null null
+2025-01-20 12:28:24.054 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5164/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 86.2977ms
+2025-01-20 12:28:35.560 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5164/api/vendas - null null
+2025-01-20 12:28:35.563 -03:00 [WRN] Failed to determine the https port for redirect.
+2025-01-20 12:28:35.578 -03:00 [INF] Executing endpoint 'TakingElanoApi.Controllers.VendasController.GetAll (TakingElano.API)'
+2025-01-20 12:28:35.589 -03:00 [INF] Route matched with {action = "GetAll", controller = "Vendas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller TakingElanoApi.Controllers.VendasController (TakingElano.API).
+2025-01-20 12:28:36.658 -03:00 [INF] Executed DbCommand (31ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "v"."Id", "v"."Data", "v"."Total", "i"."Id", "i"."Desconto", "i"."Nome", "i"."PrecoUnitario", "i"."Quantidade", "i"."VendaId"
+FROM "Vendas" AS "v"
+LEFT JOIN "Itens" AS "i" ON "v"."Id" = "i"."VendaId"
+ORDER BY "v"."Id"
+2025-01-20 12:28:36.722 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[TakingElano.Domain.Entities.Venda, TakingElano.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[TakingElano.Application.DTOs.VendaDto, TakingElano.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-01-20 12:28:36.745 -03:00 [INF] Executed action TakingElanoApi.Controllers.VendasController.GetAll (TakingElano.API) in 1151.9939ms
+2025-01-20 12:28:36.745 -03:00 [INF] Executed endpoint 'TakingElanoApi.Controllers.VendasController.GetAll (TakingElano.API)'
+2025-01-20 12:28:36.749 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5164/api/vendas - 200 null application/json; charset=utf-8 1189.6722ms
+2025-01-20 12:29:31.135 -03:00 [INF] Application is shutting down...
+2025-01-20 12:46:26.510 -03:00 [INF] Now listening on: http://localhost:5164
+2025-01-20 12:46:26.543 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-20 12:46:26.543 -03:00 [INF] Hosting environment: Development
+2025-01-20 12:46:26.543 -03:00 [INF] Content root path: C:\Elano\Jbs\Tests\TakingElano\TakingElano.API
+2025-01-20 12:46:43.633 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5164/swagger/index.html - null null
+2025-01-20 12:46:43.691 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5164/swagger/index.html - 200 null text/html;charset=utf-8 59.807ms
+2025-01-20 12:46:43.724 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5164/swagger/index.js - null null
+2025-01-20 12:46:43.726 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5164/swagger/index.js - 200 null application/javascript;charset=utf-8 3.7487ms
+2025-01-20 12:46:43.892 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5164/swagger/v1/swagger.json - null null
+2025-01-20 12:46:43.893 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5164/swagger/favicon-32x32.png - null null
+2025-01-20 12:46:43.906 -03:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2025-01-20 12:46:43.906 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5164/swagger/favicon-32x32.png - 200 628 image/png 13.0034ms
+2025-01-20 12:46:43.976 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5164/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 84.1166ms
+2025-01-20 12:46:52.089 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5164/api/vendas - null null
+2025-01-20 12:46:52.091 -03:00 [WRN] Failed to determine the https port for redirect.
+2025-01-20 12:46:52.106 -03:00 [INF] Executing endpoint 'TakingElanoApi.Controllers.VendasController.GetAll (TakingElano.API)'
+2025-01-20 12:46:52.116 -03:00 [INF] Route matched with {action = "GetAll", controller = "Vendas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller TakingElanoApi.Controllers.VendasController (TakingElano.API).
+2025-01-20 12:46:52.833 -03:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "v"."Id", "v"."Data", "i"."Id", "i"."Desconto", "i"."Nome", "i"."PrecoUnitario", "i"."Quantidade", "i"."VendaId"
+FROM "Vendas" AS "v"
+LEFT JOIN "Itens" AS "i" ON "v"."Id" = "i"."VendaId"
+ORDER BY "v"."Id"
+2025-01-20 12:46:52.888 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[TakingElano.Domain.Entities.Venda, TakingElano.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[TakingElano.Application.DTOs.VendaDto, TakingElano.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-01-20 12:46:52.913 -03:00 [INF] Executed action TakingElanoApi.Controllers.VendasController.GetAll (TakingElano.API) in 793.496ms
+2025-01-20 12:46:52.913 -03:00 [INF] Executed endpoint 'TakingElanoApi.Controllers.VendasController.GetAll (TakingElano.API)'
+2025-01-20 12:46:52.917 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5164/api/vendas - 200 null application/json; charset=utf-8 828.186ms
+2025-01-20 12:47:29.875 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5164/api/vendas - application/json 432
+2025-01-20 12:47:29.876 -03:00 [INF] Executing endpoint 'TakingElanoApi.Controllers.VendasController.Create (TakingElano.API)'
+2025-01-20 12:47:29.884 -03:00 [INF] Route matched with {action = "Create", controller = "Vendas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(TakingElano.Application.DTOs.VendaDto) on controller TakingElanoApi.Controllers.VendasController (TakingElano.API).
+2025-01-20 12:47:30.012 -03:00 [ERR] Failed executing DbCommand (4ms) [Parameters=[@p0='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Vendas" ("Data")
+VALUES (@p0)
+RETURNING "Id";
+2025-01-20 12:47:30.027 -03:00 [ERR] An exception occurred in the database while saving changes for context type 'TakingElano.Infrastructure.Data.ApplicationDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 19: 'NOT NULL constraint failed: Vendas.Total'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 19: 'NOT NULL constraint failed: Vendas.Total'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2025-01-20 12:47:30.029 -03:00 [INF] Executed action TakingElanoApi.Controllers.VendasController.Create (TakingElano.API) in 144.0431ms
+2025-01-20 12:47:30.030 -03:00 [INF] Executed endpoint 'TakingElanoApi.Controllers.VendasController.Create (TakingElano.API)'
+2025-01-20 12:47:30.030 -03:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 19: 'NOT NULL constraint failed: Vendas.Total'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at TakingElano.Infrastructure.Repositories.VendaRepository.AddAsync(Venda venda) in C:\Elano\Jbs\Tests\TakingElano\TakingElano.Infrastructure\Repositories\VendaRepository.cs:line 30
+   at TakingElano.Application.Services.VendaService.CriarVendaAsync(VendaDto vendaDto) in C:\Elano\Jbs\Tests\TakingElano\TakingElano.Application\Services\VendaService.cs:line 41
+   at TakingElanoApi.Controllers.VendasController.Create(VendaDto vendaDto) in C:\Elano\Jbs\Tests\TakingElano\TakingElano.API\Controllers\VendaController.cs:line 38
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-01-20 12:47:30.042 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5164/api/vendas - 500 null text/plain; charset=utf-8 167.0208ms
+2025-01-20 12:47:57.276 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5164/api/vendas - application/json 445
+2025-01-20 12:47:57.277 -03:00 [INF] Executing endpoint 'TakingElanoApi.Controllers.VendasController.Create (TakingElano.API)'
+2025-01-20 12:47:57.277 -03:00 [INF] Route matched with {action = "Create", controller = "Vendas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(TakingElano.Application.DTOs.VendaDto) on controller TakingElanoApi.Controllers.VendasController (TakingElano.API).
+2025-01-20 12:47:57.344 -03:00 [ERR] Failed executing DbCommand (1ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Vendas" ("Id", "Data")
+VALUES (@p0, @p1);
+2025-01-20 12:47:57.345 -03:00 [ERR] An exception occurred in the database while saving changes for context type 'TakingElano.Infrastructure.Data.ApplicationDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 19: 'NOT NULL constraint failed: Vendas.Total'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 19: 'NOT NULL constraint failed: Vendas.Total'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2025-01-20 12:47:57.346 -03:00 [INF] Executed action TakingElanoApi.Controllers.VendasController.Create (TakingElano.API) in 68.9975ms
+2025-01-20 12:47:57.346 -03:00 [INF] Executed endpoint 'TakingElanoApi.Controllers.VendasController.Create (TakingElano.API)'
+2025-01-20 12:47:57.346 -03:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 19: 'NOT NULL constraint failed: Vendas.Total'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at TakingElano.Infrastructure.Repositories.VendaRepository.AddAsync(Venda venda) in C:\Elano\Jbs\Tests\TakingElano\TakingElano.Infrastructure\Repositories\VendaRepository.cs:line 30
+   at TakingElano.Application.Services.VendaService.CriarVendaAsync(VendaDto vendaDto) in C:\Elano\Jbs\Tests\TakingElano\TakingElano.Application\Services\VendaService.cs:line 41
+   at TakingElanoApi.Controllers.VendasController.Create(VendaDto vendaDto) in C:\Elano\Jbs\Tests\TakingElano\TakingElano.API\Controllers\VendaController.cs:line 38
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-01-20 12:47:57.349 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5164/api/vendas - 500 null text/plain; charset=utf-8 72.3479ms
+2025-01-20 12:48:16.431 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5164/api/vendas - null null
+2025-01-20 12:48:16.432 -03:00 [INF] Executing endpoint 'TakingElanoApi.Controllers.VendasController.GetAll (TakingElano.API)'
+2025-01-20 12:48:16.432 -03:00 [INF] Route matched with {action = "GetAll", controller = "Vendas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller TakingElanoApi.Controllers.VendasController (TakingElano.API).
+2025-01-20 12:48:16.439 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "v"."Id", "v"."Data", "i"."Id", "i"."Desconto", "i"."Nome", "i"."PrecoUnitario", "i"."Quantidade", "i"."VendaId"
+FROM "Vendas" AS "v"
+LEFT JOIN "Itens" AS "i" ON "v"."Id" = "i"."VendaId"
+ORDER BY "v"."Id"
+2025-01-20 12:48:16.440 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[TakingElano.Domain.Entities.Venda, TakingElano.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[TakingElano.Application.DTOs.VendaDto, TakingElano.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-01-20 12:48:16.441 -03:00 [INF] Executed action TakingElanoApi.Controllers.VendasController.GetAll (TakingElano.API) in 8.3695ms
+2025-01-20 12:48:16.441 -03:00 [INF] Executed endpoint 'TakingElanoApi.Controllers.VendasController.GetAll (TakingElano.API)'
+2025-01-20 12:48:16.441 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5164/api/vendas - 200 null application/json; charset=utf-8 9.979ms
+2025-01-20 12:49:00.932 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5164/api/vendas - application/json 433
+2025-01-20 12:49:00.933 -03:00 [INF] Executing endpoint 'TakingElanoApi.Controllers.VendasController.Create (TakingElano.API)'
+2025-01-20 12:49:00.933 -03:00 [INF] Route matched with {action = "Create", controller = "Vendas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(TakingElano.Application.DTOs.VendaDto) on controller TakingElanoApi.Controllers.VendasController (TakingElano.API).
+2025-01-20 12:49:00.935 -03:00 [ERR] Failed executing DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Vendas" ("Id", "Data")
+VALUES (@p0, @p1);
+2025-01-20 12:49:00.945 -03:00 [ERR] An exception occurred in the database while saving changes for context type 'TakingElano.Infrastructure.Data.ApplicationDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 19: 'NOT NULL constraint failed: Vendas.Total'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 19: 'NOT NULL constraint failed: Vendas.Total'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2025-01-20 12:49:00.945 -03:00 [INF] Executed action TakingElanoApi.Controllers.VendasController.Create (TakingElano.API) in 12.6891ms
+2025-01-20 12:49:00.946 -03:00 [INF] Executed endpoint 'TakingElanoApi.Controllers.VendasController.Create (TakingElano.API)'
+2025-01-20 12:49:00.946 -03:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 19: 'NOT NULL constraint failed: Vendas.Total'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at TakingElano.Infrastructure.Repositories.VendaRepository.AddAsync(Venda venda) in C:\Elano\Jbs\Tests\TakingElano\TakingElano.Infrastructure\Repositories\VendaRepository.cs:line 30
+   at TakingElano.Application.Services.VendaService.CriarVendaAsync(VendaDto vendaDto) in C:\Elano\Jbs\Tests\TakingElano\TakingElano.Application\Services\VendaService.cs:line 41
+   at TakingElanoApi.Controllers.VendasController.Create(VendaDto vendaDto) in C:\Elano\Jbs\Tests\TakingElano\TakingElano.API\Controllers\VendaController.cs:line 38
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-01-20 12:49:00.947 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5164/api/vendas - 500 null text/plain; charset=utf-8 14.7733ms
+2025-01-20 12:49:10.886 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5164/api/vendas - application/json 433
+2025-01-20 12:49:10.886 -03:00 [INF] Executing endpoint 'TakingElanoApi.Controllers.VendasController.Create (TakingElano.API)'
+2025-01-20 12:49:10.886 -03:00 [INF] Route matched with {action = "Create", controller = "Vendas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(TakingElano.Application.DTOs.VendaDto) on controller TakingElanoApi.Controllers.VendasController (TakingElano.API).
+2025-01-20 12:49:10.888 -03:00 [ERR] Failed executing DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Vendas" ("Id", "Data")
+VALUES (@p0, @p1);
+2025-01-20 12:49:10.889 -03:00 [ERR] An exception occurred in the database while saving changes for context type 'TakingElano.Infrastructure.Data.ApplicationDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 19: 'NOT NULL constraint failed: Vendas.Total'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 19: 'NOT NULL constraint failed: Vendas.Total'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2025-01-20 12:49:10.890 -03:00 [INF] Executed action TakingElanoApi.Controllers.VendasController.Create (TakingElano.API) in 3.6358ms
+2025-01-20 12:49:10.890 -03:00 [INF] Executed endpoint 'TakingElanoApi.Controllers.VendasController.Create (TakingElano.API)'
+2025-01-20 12:49:10.890 -03:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 19: 'NOT NULL constraint failed: Vendas.Total'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at TakingElano.Infrastructure.Repositories.VendaRepository.AddAsync(Venda venda) in C:\Elano\Jbs\Tests\TakingElano\TakingElano.Infrastructure\Repositories\VendaRepository.cs:line 30
+   at TakingElano.Application.Services.VendaService.CriarVendaAsync(VendaDto vendaDto) in C:\Elano\Jbs\Tests\TakingElano\TakingElano.Application\Services\VendaService.cs:line 41
+   at TakingElanoApi.Controllers.VendasController.Create(VendaDto vendaDto) in C:\Elano\Jbs\Tests\TakingElano\TakingElano.API\Controllers\VendaController.cs:line 38
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-01-20 12:49:10.891 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5164/api/vendas - 500 null text/plain; charset=utf-8 5.7085ms
+2025-01-20 12:52:13.398 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5164/api/vendas - application/json 398
+2025-01-20 12:52:13.398 -03:00 [INF] Executing endpoint 'TakingElanoApi.Controllers.VendasController.Create (TakingElano.API)'
+2025-01-20 12:52:13.398 -03:00 [INF] Route matched with {action = "Create", controller = "Vendas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(TakingElano.Application.DTOs.VendaDto) on controller TakingElanoApi.Controllers.VendasController (TakingElano.API).
+2025-01-20 12:52:13.401 -03:00 [ERR] Failed executing DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Vendas" ("Id", "Data")
+VALUES (@p0, @p1);
+2025-01-20 12:52:13.402 -03:00 [ERR] An exception occurred in the database while saving changes for context type 'TakingElano.Infrastructure.Data.ApplicationDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 19: 'NOT NULL constraint failed: Vendas.Total'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 19: 'NOT NULL constraint failed: Vendas.Total'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2025-01-20 12:52:13.411 -03:00 [INF] Executed action TakingElanoApi.Controllers.VendasController.Create (TakingElano.API) in 12.128ms
+2025-01-20 12:52:13.411 -03:00 [INF] Executed endpoint 'TakingElanoApi.Controllers.VendasController.Create (TakingElano.API)'
+2025-01-20 12:52:13.411 -03:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 19: 'NOT NULL constraint failed: Vendas.Total'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at TakingElano.Infrastructure.Repositories.VendaRepository.AddAsync(Venda venda) in C:\Elano\Jbs\Tests\TakingElano\TakingElano.Infrastructure\Repositories\VendaRepository.cs:line 30
+   at TakingElano.Application.Services.VendaService.CriarVendaAsync(VendaDto vendaDto) in C:\Elano\Jbs\Tests\TakingElano\TakingElano.Application\Services\VendaService.cs:line 41
+   at TakingElanoApi.Controllers.VendasController.Create(VendaDto vendaDto) in C:\Elano\Jbs\Tests\TakingElano\TakingElano.API\Controllers\VendaController.cs:line 38
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-01-20 12:52:13.416 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5164/api/vendas - 500 null text/plain; charset=utf-8 17.5517ms
+2025-01-20 13:59:46.456 -03:00 [INF] Application is shutting down...
+2025-01-20 14:00:43.694 -03:00 [INF] Now listening on: http://localhost:5164
+2025-01-20 14:00:43.723 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-20 14:00:43.723 -03:00 [INF] Hosting environment: Development
+2025-01-20 14:00:43.723 -03:00 [INF] Content root path: C:\Elano\Jbs\Tests\TakingElano\TakingElano.API
+2025-01-20 14:00:58.976 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5164/swagger/index.html - null null
+2025-01-20 14:00:59.059 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5164/swagger/index.html - 200 null text/html;charset=utf-8 83.6654ms
+2025-01-20 14:00:59.102 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5164/swagger/index.js - null null
+2025-01-20 14:00:59.107 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5164/swagger/index.js - 200 null application/javascript;charset=utf-8 5.4243ms
+2025-01-20 14:00:59.208 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5164/swagger/v1/swagger.json - null null
+2025-01-20 14:00:59.332 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5164/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 123.9989ms
+2025-01-20 14:01:06.168 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5164/api/vendas - null null
+2025-01-20 14:01:06.173 -03:00 [WRN] Failed to determine the https port for redirect.
+2025-01-20 14:01:06.203 -03:00 [INF] Executing endpoint 'TakingElanoApi.Controllers.VendasController.GetAll (TakingElano.API)'
+2025-01-20 14:01:06.224 -03:00 [INF] Route matched with {action = "GetAll", controller = "Vendas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller TakingElanoApi.Controllers.VendasController (TakingElano.API).
+2025-01-20 14:01:07.294 -03:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "v"."Id", "v"."Data", "i"."Id", "i"."Desconto", "i"."Nome", "i"."PrecoUnitario", "i"."Quantidade", "i"."VendaId"
+FROM "Vendas" AS "v"
+LEFT JOIN "Itens" AS "i" ON "v"."Id" = "i"."VendaId"
+ORDER BY "v"."Id"
+2025-01-20 14:01:07.390 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[TakingElano.Domain.Entities.Venda, TakingElano.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[TakingElano.Application.DTOs.VendaDto, TakingElano.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-01-20 14:01:07.422 -03:00 [INF] Executed action TakingElanoApi.Controllers.VendasController.GetAll (TakingElano.API) in 1194.4103ms
+2025-01-20 14:01:07.422 -03:00 [INF] Executed endpoint 'TakingElanoApi.Controllers.VendasController.GetAll (TakingElano.API)'
+2025-01-20 14:01:07.427 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5164/api/vendas - 200 null application/json; charset=utf-8 1258.9577ms
+2025-01-20 14:01:19.949 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5164/api/vendas/2 - null null
+2025-01-20 14:01:19.949 -03:00 [INF] Executing endpoint 'TakingElanoApi.Controllers.VendasController.GetById (TakingElano.API)'
+2025-01-20 14:01:19.959 -03:00 [INF] Route matched with {action = "GetById", controller = "Vendas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32) on controller TakingElanoApi.Controllers.VendasController (TakingElano.API).
+2025-01-20 14:01:20.082 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "v0"."Id", "v0"."Data", "i"."Id", "i"."Desconto", "i"."Nome", "i"."PrecoUnitario", "i"."Quantidade", "i"."VendaId"
+FROM (
+    SELECT "v"."Id", "v"."Data"
+    FROM "Vendas" AS "v"
+    WHERE "v"."Id" = @__id_0
+    LIMIT 1
+) AS "v0"
+LEFT JOIN "Itens" AS "i" ON "v0"."Id" = "i"."VendaId"
+ORDER BY "v0"."Id"
+2025-01-20 14:01:20.084 -03:00 [INF] Executing OkObjectResult, writing value of type 'TakingElano.Application.DTOs.VendaDto'.
+2025-01-20 14:01:20.084 -03:00 [INF] Executed action TakingElanoApi.Controllers.VendasController.GetById (TakingElano.API) in 124.7626ms
+2025-01-20 14:01:20.084 -03:00 [INF] Executed endpoint 'TakingElanoApi.Controllers.VendasController.GetById (TakingElano.API)'
+2025-01-20 14:01:20.084 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5164/api/vendas/2 - 200 null application/json; charset=utf-8 135.6099ms
+2025-01-20 14:01:25.352 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5164/api/vendas/3 - null null
+2025-01-20 14:01:25.352 -03:00 [INF] Executing endpoint 'TakingElanoApi.Controllers.VendasController.GetById (TakingElano.API)'
+2025-01-20 14:01:25.352 -03:00 [INF] Route matched with {action = "GetById", controller = "Vendas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32) on controller TakingElanoApi.Controllers.VendasController (TakingElano.API).
+2025-01-20 14:01:25.409 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "v0"."Id", "v0"."Data", "i"."Id", "i"."Desconto", "i"."Nome", "i"."PrecoUnitario", "i"."Quantidade", "i"."VendaId"
+FROM (
+    SELECT "v"."Id", "v"."Data"
+    FROM "Vendas" AS "v"
+    WHERE "v"."Id" = @__id_0
+    LIMIT 1
+) AS "v0"
+LEFT JOIN "Itens" AS "i" ON "v0"."Id" = "i"."VendaId"
+ORDER BY "v0"."Id"
+2025-01-20 14:01:25.412 -03:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2025-01-20 14:01:25.431 -03:00 [INF] Executed action TakingElanoApi.Controllers.VendasController.GetById (TakingElano.API) in 78.7451ms
+2025-01-20 14:01:25.431 -03:00 [INF] Executed endpoint 'TakingElanoApi.Controllers.VendasController.GetById (TakingElano.API)'
+2025-01-20 14:01:25.431 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5164/api/vendas/3 - 404 null application/problem+json; charset=utf-8 79.6341ms
+2025-01-20 14:01:57.245 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5164/api/vendas - application/json 234
+2025-01-20 14:01:57.246 -03:00 [INF] Executing endpoint 'TakingElanoApi.Controllers.VendasController.Create (TakingElano.API)'
+2025-01-20 14:01:57.249 -03:00 [INF] Route matched with {action = "Create", controller = "Vendas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(TakingElano.Application.DTOs.VendaDto) on controller TakingElanoApi.Controllers.VendasController (TakingElano.API).
+2025-01-20 14:02:26.817 -03:00 [ERR] Failed executing DbCommand (7ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Vendas" ("Id", "Data")
+VALUES (@p0, @p1);
+2025-01-20 14:02:26.853 -03:00 [ERR] An exception occurred in the database while saving changes for context type 'TakingElano.Infrastructure.Data.ApplicationDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 19: 'NOT NULL constraint failed: Vendas.Total'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 19: 'NOT NULL constraint failed: Vendas.Total'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2025-01-20 14:09:28.661 -03:00 [INF] Executed action TakingElanoApi.Controllers.VendasController.Create (TakingElano.API) in 451410.9447ms
+2025-01-20 14:09:28.662 -03:00 [INF] Executed endpoint 'TakingElanoApi.Controllers.VendasController.Create (TakingElano.API)'
+2025-01-20 14:09:28.663 -03:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 19: 'NOT NULL constraint failed: Vendas.Total'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at TakingElano.Infrastructure.Repositories.VendaRepository.AddAsync(Venda venda) in C:\Elano\Jbs\Tests\TakingElano\TakingElano.Infrastructure\Repositories\VendaRepository.cs:line 30
+   at TakingElano.Application.Services.VendaService.CriarVendaAsync(VendaDto vendaDto) in C:\Elano\Jbs\Tests\TakingElano\TakingElano.Application\Services\VendaService.cs:line 46
+   at TakingElanoApi.Controllers.VendasController.Create(VendaDto vendaDto) in C:\Elano\Jbs\Tests\TakingElano\TakingElano.API\Controllers\VendaController.cs:line 38
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-01-20 14:09:28.686 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5164/api/vendas - 500 null text/plain; charset=utf-8 451441.3485ms
+2025-01-20 14:14:13.240 -03:00 [INF] Now listening on: http://localhost:5164
+2025-01-20 14:14:13.267 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-20 14:14:13.267 -03:00 [INF] Hosting environment: Development
+2025-01-20 14:14:13.267 -03:00 [INF] Content root path: C:\Elano\Jbs\Tests\TakingElano\TakingElano.API
+2025-01-20 14:14:25.166 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5164/swagger/index.html - null null
+2025-01-20 14:14:25.222 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5164/swagger/index.html - 200 null text/html;charset=utf-8 57.853ms
+2025-01-20 14:14:25.260 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5164/swagger/index.js - null null
+2025-01-20 14:14:25.265 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5164/swagger/index.js - 200 null application/javascript;charset=utf-8 6.2978ms
+2025-01-20 14:14:25.357 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5164/swagger/v1/swagger.json - null null
+2025-01-20 14:14:25.449 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5164/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 91.9019ms
+2025-01-20 14:14:35.471 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5164/api/vendas - application/json 234
+2025-01-20 14:14:35.473 -03:00 [WRN] Failed to determine the https port for redirect.
+2025-01-20 14:14:35.489 -03:00 [INF] Executing endpoint 'TakingElanoApi.Controllers.VendasController.Create (TakingElano.API)'
+2025-01-20 14:14:35.504 -03:00 [INF] Route matched with {action = "Create", controller = "Vendas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(TakingElano.Application.DTOs.VendaDto) on controller TakingElanoApi.Controllers.VendasController (TakingElano.API).
+2025-01-20 14:14:36.172 -03:00 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime), @p2='?' (DbType = Decimal)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Vendas" ("Id", "Data", "Total")
+VALUES (@p0, @p1, @p2);
+2025-01-20 14:14:36.178 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Decimal), @p1='?' (Size = 6), @p2='?' (DbType = Decimal), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Itens" ("Desconto", "Nome", "PrecoUnitario", "Quantidade", "VendaId")
+VALUES (@p0, @p1, @p2, @p3, @p4)
+RETURNING "Id";
+2025-01-20 14:14:36.428 -03:00 [INF] Executing CreatedAtActionResult, writing value of type 'TakingElano.Application.DTOs.VendaDto'.
+2025-01-20 14:14:36.450 -03:00 [INF] Executed action TakingElanoApi.Controllers.VendasController.Create (TakingElano.API) in 942.9089ms
+2025-01-20 14:14:36.450 -03:00 [INF] Executed endpoint 'TakingElanoApi.Controllers.VendasController.Create (TakingElano.API)'
+2025-01-20 14:14:36.453 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5164/api/vendas - 201 null application/json; charset=utf-8 982.5972ms
+2025-01-20 14:15:13.749 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5164/api/vendas - application/json 234
+2025-01-20 14:15:13.749 -03:00 [INF] Executing endpoint 'TakingElanoApi.Controllers.VendasController.Create (TakingElano.API)'
+2025-01-20 14:15:13.750 -03:00 [INF] Route matched with {action = "Create", controller = "Vendas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(TakingElano.Application.DTOs.VendaDto) on controller TakingElanoApi.Controllers.VendasController (TakingElano.API).
+2025-01-20 14:15:13.795 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime), @p2='?' (DbType = Decimal)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Vendas" ("Id", "Data", "Total")
+VALUES (@p0, @p1, @p2);
+2025-01-20 14:15:13.796 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Decimal), @p1='?' (Size = 6), @p2='?' (DbType = Decimal), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Itens" ("Desconto", "Nome", "PrecoUnitario", "Quantidade", "VendaId")
+VALUES (@p0, @p1, @p2, @p3, @p4)
+RETURNING "Id";
+2025-01-20 14:15:13.872 -03:00 [INF] Executing CreatedAtActionResult, writing value of type 'TakingElano.Application.DTOs.VendaDto'.
+2025-01-20 14:15:13.873 -03:00 [INF] Executed action TakingElanoApi.Controllers.VendasController.Create (TakingElano.API) in 123.1636ms
+2025-01-20 14:15:13.873 -03:00 [INF] Executed endpoint 'TakingElanoApi.Controllers.VendasController.Create (TakingElano.API)'
+2025-01-20 14:15:13.873 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5164/api/vendas - 201 null application/json; charset=utf-8 124.0794ms
+2025-01-20 14:15:28.531 -03:00 [INF] Application is shutting down...
+2025-01-20 14:19:33.967 -03:00 [INF] Now listening on: http://localhost:5164
+2025-01-20 14:19:34.001 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-20 14:19:34.001 -03:00 [INF] Hosting environment: Development
+2025-01-20 14:19:34.001 -03:00 [INF] Content root path: C:\Elano\Jbs\Tests\TakingElano\TakingElano.API
+2025-01-20 14:20:18.701 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5164/swagger/index.html - null null
+2025-01-20 14:20:18.758 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5164/swagger/index.html - 200 null text/html;charset=utf-8 59.0973ms
+2025-01-20 14:20:18.790 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5164/swagger/index.js - null null
+2025-01-20 14:20:18.792 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5164/swagger/index.js - 200 null application/javascript;charset=utf-8 2.3652ms
+2025-01-20 14:20:18.884 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5164/swagger/v1/swagger.json - null null
+2025-01-20 14:20:18.976 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5164/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 92.2604ms
+2025-01-20 14:20:35.176 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5164/api/vendas - application/json 232
+2025-01-20 14:20:35.179 -03:00 [WRN] Failed to determine the https port for redirect.
+2025-01-20 14:20:35.193 -03:00 [INF] Executing endpoint 'TakingElanoApi.Controllers.VendasController.Create (TakingElano.API)'
+2025-01-20 14:20:35.207 -03:00 [INF] Route matched with {action = "Create", controller = "Vendas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(TakingElano.Application.DTOs.VendaDto) on controller TakingElanoApi.Controllers.VendasController (TakingElano.API).
+2025-01-20 14:20:35.858 -03:00 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime), @p2='?' (DbType = Decimal)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Vendas" ("Id", "Data", "Total")
+VALUES (@p0, @p1, @p2);
+2025-01-20 14:20:35.865 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Decimal), @p1='?' (Size = 6), @p2='?' (DbType = Decimal), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Itens" ("Desconto", "Nome", "PrecoUnitario", "Quantidade", "VendaId")
+VALUES (@p0, @p1, @p2, @p3, @p4)
+RETURNING "Id";
+2025-01-20 14:20:36.118 -03:00 [INF] Executing CreatedAtActionResult, writing value of type 'TakingElano.Application.DTOs.VendaDto'.
+2025-01-20 14:20:36.137 -03:00 [INF] Executed action TakingElanoApi.Controllers.VendasController.Create (TakingElano.API) in 927.7135ms
+2025-01-20 14:20:36.137 -03:00 [INF] Executed endpoint 'TakingElanoApi.Controllers.VendasController.Create (TakingElano.API)'
+2025-01-20 14:20:36.141 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5164/api/vendas - 201 null application/json; charset=utf-8 964.8543ms
+2025-01-20 14:21:19.968 -03:00 [INF] Application is shutting down...
