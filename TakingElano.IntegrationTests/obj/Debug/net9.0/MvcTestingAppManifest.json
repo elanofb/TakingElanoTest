@@ -1,7 +1,7 @@
 {
-  "TakingElano.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Elano\\Jbs\\Tests\\TakingElano\\TakingElano.API",
-  "TakingElano.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Elano\\Jbs\\Tests\\TakingElano\\TakingElano.Application",
-  "TakingElano.CrossCutting, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Elano\\Jbs\\Tests\\TakingElano\\TakingElano.CrossCutting",
-  "TakingElano.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Elano\\Jbs\\Tests\\TakingElano\\TakingElano.Domain",
-  "TakingElano.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Elano\\Jbs\\Tests\\TakingElano\\TakingElano.Infrastructure"
+  "TakingElano.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Elano\\Jbs\\Tests\\TakingElanoTest\\TakingElano.API",
+  "TakingElano.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Elano\\Jbs\\Tests\\TakingElanoTest\\TakingElano.Application",
+  "TakingElano.CrossCutting, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Elano\\Jbs\\Tests\\TakingElanoTest\\TakingElano.CrossCutting",
+  "TakingElano.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Elano\\Jbs\\Tests\\TakingElanoTest\\TakingElano.Domain",
+  "TakingElano.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Elano\\Jbs\\Tests\\TakingElanoTest\\TakingElano.Infrastructure"
 }

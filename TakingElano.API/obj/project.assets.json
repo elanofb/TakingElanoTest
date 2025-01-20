@@ -8893,11 +8893,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Elano\\Jbs\\Tests\\TakingElano\\TakingElano.API\\TakingElano.API.csproj",
+      "projectUniqueName": "C:\\Elano\\Jbs\\Tests\\TakingElanoTest\\TakingElano.API\\TakingElano.API.csproj",
       "projectName": "TakingElano.API",
-      "projectPath": "C:\\Elano\\Jbs\\Tests\\TakingElano\\TakingElano.API\\TakingElano.API.csproj",
+      "projectPath": "C:\\Elano\\Jbs\\Tests\\TakingElanoTest\\TakingElano.API\\TakingElano.API.csproj",
       "packagesPath": "C:\\Users\\Elano\\.nuget\\packages\\",
-      "outputPath": "C:\\Elano\\Jbs\\Tests\\TakingElano\\TakingElano.API\\obj\\",
+      "outputPath": "C:\\Elano\\Jbs\\Tests\\TakingElanoTest\\TakingElano.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -8919,17 +8919,17 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "C:\\Elano\\Jbs\\Tests\\TakingElano\\TakingElano.Application\\TakingElano.Application.csproj": {
-              "projectPath": "C:\\Elano\\Jbs\\Tests\\TakingElano\\TakingElano.Application\\TakingElano.Application.csproj"
+            "C:\\Elano\\Jbs\\Tests\\TakingElanoTest\\TakingElano.Application\\TakingElano.Application.csproj": {
+              "projectPath": "C:\\Elano\\Jbs\\Tests\\TakingElanoTest\\TakingElano.Application\\TakingElano.Application.csproj"
             },
-            "C:\\Elano\\Jbs\\Tests\\TakingElano\\TakingElano.CrossCutting\\TakingElano.CrossCutting.csproj": {
-              "projectPath": "C:\\Elano\\Jbs\\Tests\\TakingElano\\TakingElano.CrossCutting\\TakingElano.CrossCutting.csproj"
+            "C:\\Elano\\Jbs\\Tests\\TakingElanoTest\\TakingElano.CrossCutting\\TakingElano.CrossCutting.csproj": {
+              "projectPath": "C:\\Elano\\Jbs\\Tests\\TakingElanoTest\\TakingElano.CrossCutting\\TakingElano.CrossCutting.csproj"
             },
-            "C:\\Elano\\Jbs\\Tests\\TakingElano\\TakingElano.Domain\\TakingElano.Domain.csproj": {
-              "projectPath": "C:\\Elano\\Jbs\\Tests\\TakingElano\\TakingElano.Domain\\TakingElano.Domain.csproj"
+            "C:\\Elano\\Jbs\\Tests\\TakingElanoTest\\TakingElano.Domain\\TakingElano.Domain.csproj": {
+              "projectPath": "C:\\Elano\\Jbs\\Tests\\TakingElanoTest\\TakingElano.Domain\\TakingElano.Domain.csproj"
             },
-            "C:\\Elano\\Jbs\\Tests\\TakingElano\\TakingElano.Infrastructure\\TakingElano.Infrastructure.csproj": {
-              "projectPath": "C:\\Elano\\Jbs\\Tests\\TakingElano\\TakingElano.Infrastructure\\TakingElano.Infrastructure.csproj"
+            "C:\\Elano\\Jbs\\Tests\\TakingElanoTest\\TakingElano.Infrastructure\\TakingElano.Infrastructure.csproj": {
+              "projectPath": "C:\\Elano\\Jbs\\Tests\\TakingElanoTest\\TakingElano.Infrastructure\\TakingElano.Infrastructure.csproj"
             }
           }
         }

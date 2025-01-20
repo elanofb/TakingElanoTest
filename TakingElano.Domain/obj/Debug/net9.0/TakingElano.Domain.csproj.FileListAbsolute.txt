@@ -9,3 +9,15 @@ C:\Elano\Jbs\Tests\TakingElano\TakingElano.Domain\obj\Debug\net9.0\TakingElano.D
 C:\Elano\Jbs\Tests\TakingElano\TakingElano.Domain\obj\Debug\net9.0\refint\TakingElano.Domain.dll
 C:\Elano\Jbs\Tests\TakingElano\TakingElano.Domain\obj\Debug\net9.0\TakingElano.Domain.pdb
 C:\Elano\Jbs\Tests\TakingElano\TakingElano.Domain\obj\Debug\net9.0\ref\TakingElano.Domain.dll
+C:\Elano\Jbs\Tests\TakingElanoTest\TakingElano.Domain\bin\Debug\net9.0\TakingElano.Domain.deps.json
+C:\Elano\Jbs\Tests\TakingElanoTest\TakingElano.Domain\bin\Debug\net9.0\TakingElano.Domain.dll
+C:\Elano\Jbs\Tests\TakingElanoTest\TakingElano.Domain\bin\Debug\net9.0\TakingElano.Domain.pdb
+C:\Elano\Jbs\Tests\TakingElanoTest\TakingElano.Domain\obj\Debug\net9.0\TakingElano.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Elano\Jbs\Tests\TakingElanoTest\TakingElano.Domain\obj\Debug\net9.0\TakingElano.Domain.AssemblyInfoInputs.cache
+C:\Elano\Jbs\Tests\TakingElanoTest\TakingElano.Domain\obj\Debug\net9.0\TakingElano.Domain.AssemblyInfo.cs
+C:\Elano\Jbs\Tests\TakingElanoTest\TakingElano.Domain\obj\Debug\net9.0\TakingElano.Domain.csproj.CoreCompileInputs.cache
+C:\Elano\Jbs\Tests\TakingElanoTest\TakingElano.Domain\obj\Debug\net9.0\TakingElano.Domain.sourcelink.json
+C:\Elano\Jbs\Tests\TakingElanoTest\TakingElano.Domain\obj\Debug\net9.0\TakingElano.Domain.dll
+C:\Elano\Jbs\Tests\TakingElanoTest\TakingElano.Domain\obj\Debug\net9.0\refint\TakingElano.Domain.dll
+C:\Elano\Jbs\Tests\TakingElanoTest\TakingElano.Domain\obj\Debug\net9.0\TakingElano.Domain.pdb
+C:\Elano\Jbs\Tests\TakingElanoTest\TakingElano.Domain\obj\Debug\net9.0\ref\TakingElano.Domain.dll
